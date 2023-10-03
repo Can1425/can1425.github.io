@@ -154,7 +154,6 @@ search:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: livere
-    type: "嗯？这里是评论区"
     uid: MTAyMC81ODU0OS8zNTAxMg
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
