@@ -153,8 +153,8 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: livere
-    uid: MTAyMC81ODU0OS8zNTAxMg
+    type: changyan
+    appid: cywmYPaGi
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 #donates:
