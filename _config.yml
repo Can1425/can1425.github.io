@@ -103,5 +103,5 @@ theme: candy
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:yilinyo/can1425.github.io.git
-  branch: master
+  repo: git@github.com:Can/can1425.github.io.git
+  branch: main
