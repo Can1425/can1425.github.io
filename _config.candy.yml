@@ -154,7 +154,8 @@ search:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: changyan
-    app_id: "cywmYPaGi"
+    app_id: cywmYPaGi
+    conf: prod_63a4c98240dec0ed23762d1e55f9ba36
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 #donates:
