@@ -154,10 +154,10 @@ search:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: valine
-    app_id: K0eg5dQJME0AUMjxJJkenw6q-MdYXbMMI
-    app_key: hebndrUU238vfx6ZtriCnsxE
+    app_id: PDCScPU8I0dyZdmrZBgpAZIM-MdYXbMMI
+    app_key: iActIpcRlHW8w5sLZCY9ecSR
     # Disqus shortname
-    shortname: ''
+    shortname: 'Go Fro It'
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 #donates:
