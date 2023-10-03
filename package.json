@@ -30,7 +30,7 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-theme-volantis": "^5.8.0",
-    "inferno": "^7.3.3",
+    "inferno": "^8.2.2",
     "inferno-create-element": "^7.3.3"
   }
 }
