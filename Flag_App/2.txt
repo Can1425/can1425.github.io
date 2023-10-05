@@ -1,0 +1,70 @@
+from mpython import *
+
+import time
+
+dx = None
+
+x0 = None
+
+x = None
+
+y = None
+
+score = None
+
+import random
+
+def on_button_b_down(_):
+    global score, dx, x0, x, y
+    time.sleep_ms(10)
+    if button_b.value() == 1: return
+    rgb.fill( (0, 0, 0) )
+    rgb.write()
+    time.sleep_ms(1)
+    rgb[0] = (int(0), int(153), int(0))
+    rgb.write()
+    time.sleep_ms(1)
+    dx = 20
+    x0 = 127
+    x = 40
+    y = 44
+    score = 0
+    while True:
+        oled.fill(0)
+        oled.DispChar(str('不要停！八分音符酱'), 0, 0, 1)
+        oled.DispChar(str(str('v') + str((str(sound.read())))), 0, 0, 1)
+        oled.fill_circle(x, y, 5, 1)
+        oled.hline(0, 50, 128, 1)
+        oled.hline(x0, 50, dx, 0)
+        oled.show()
+        if 100 < sound.read():
+            x0 = x0 + -3
+        if 200 < sound.read():
+            y = y + -1
+        else:
+            # 缺陷空间
+            if 44 < y and not (x0 < x and x < x0 + dx):
+                y = 44
+            else:
+                y = y + 1
+                if 50 < y:
+                    rgb[0] = (int(255), int(0), int(0))
+                    rgb.write()
+                    time.sleep_ms(1)
+                    break
+        if y < 16:
+            rgb[0] = (int(255), int(0), int(0))
+            rgb.write()
+            time.sleep_ms(1)
+            break
+        if x0 < 0:
+            score = score + 1
+            x0 = 127
+            dx = random.randrange(20, 61, 10)
+
+random.seed(time.ticks_cpu())
+
+button_b.irq(trigger=Pin.IRQ_FALLING, handler=on_button_b_down)
+oled.fill(0)
+oled.DispChar(str('不要停！八分音符酱'), 0, 0, 1)
+oled.DispChar(str('B 键开始'), 0, 0, 1)
