@@ -1,0 +1,70 @@
+# Tetris game for mPython
+# MIT license,Copyright (c) 2019 labplus@Tangliufeng
+
+from mpython import *
+import math
+import random, time
+
+class Brick():
+    def __init__(self, p_position):
+        self.position = p_position
+
+    def draw(self):
+
+        x = self.position[1] * brick_size
+        y = self.position[0] * brick_size
+        oled.fill_rect(brick_size * (field_height - 1) - x, y, brick_size, brick_size, 1)
+
+
+class Block():
+    def __init__(self, p_bricks_layout, p_direction):
+        self.bricks_layout = p_bricks_layout
+        self.direction = p_direction
+        self.init_position = (field_width // 2 - 2, 0)
+        self.cur_layout = self.bricks_layout[self.direction]
+        self.position = self.init_position
+        self.stopped = False
+        self.move_interval = 500
+        self.last_move = 0
+        self.bricks = []
+        for (x, y) in self.cur_layout:
+            self.bricks.append(Brick((self.position[0] + x, self.position[1] + y)))
+
+    def draw(self):
+        for brick in self.bricks:
+            brick.draw()
+
+    def isLegal(self, layout, position):
+        (x0, y0) = position
+        for (x, y) in layout:
+            if x + x0 < 0 or y + y0 < 0 or x + x0 >= field_width or y + y0 >= field_height:
+                return False
+            if field_map[y + y0][x + x0] != 0:
+                return False
+        return True
+
+    def left(self):
+        new_position = (self.position[0] - 1, self.position[1])
+        if self.isLegal(self.cur_layout, new_position):
+            self.position = new_position
+            self.refresh_bircks()
+
+    def right(self):
+        new_position = (self.position[0] + 1, self.position[1])
+        if self.isLegal(self.cur_layout, new_position):
+            self.position = new_position
+            self.refresh_bircks()
+
+    def down(self):
+        (x, y) = (self.position[0], self.position[1] + 1)
+        while self.isLegal(self.cur_layout, (x, y)):
+            self.position = (x, y)
+            self.refresh_bircks()
+            y += 1
+
+    def refresh_bircks(self):
+        for (brick, (x, y)) in zip(self.bricks, self.cur_layout):
+            brick.position = (self.position[0] + x, self.position[1] + y)
+
+    def stop(self):
+        global field_bricks
