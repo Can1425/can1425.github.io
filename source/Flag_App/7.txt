@@ -1,0 +1,70 @@
+#mPythonType:0
+system_version = None
+
+device_owner = None
+
+from mpython import *
+
+import network
+
+my_wifi = wifi()
+
+oled.fill(0)
+oled.DispChar(str('POLA OS'), 0, 0, 4)
+oled.DispChar(str('正在连接服务器'), 0, 16, 4)
+oled.show()
+
+my_wifi.connectWiFi("将此替换为WiFi名称", "将此替换为WiFi密码")
+
+system_homemode = None
+
+system_consani_start_x = None
+
+system_consani_start_y = None
+
+system_consani_start_wide = None
+
+system_consani_start_height = None
+
+syetem_consani_start_fillet = None
+
+system_app_woodenfish_resetmode = None
+
+system_app_timer_resetmode = None
+
+home_movement_x = None
+
+home_movement_y = None
+
+home_icon_choosen_name = None
+
+home_icon_edge = None
+
+home_icon_fillet = None
+
+app_mader_name = None
+
+app_back_button = None
+
+app_open_button = None
+
+app_more_button = None
+
+import ntptime
+
+import time
+
+from machine import Timer
+
+_is_shaked = _is_thrown = False
+_last_x = _last_y = _last_z = _count_shaked = _count_thrown = 0
+def on_shaked():pass
+def on_thrown():pass
+
+tim11 = Timer(11)
+
+def timer11_tick(_):
+    global _is_shaked, _is_thrown, _last_x, _last_y, _last_z, _count_shaked, _count_thrown
+    if _is_shaked:
+        _count_shaked += 1
+        if _count_shaked == 5: _count_shaked = 0
