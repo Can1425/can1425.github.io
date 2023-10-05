@@ -1,0 +1,70 @@
+# Snake game for mPython
+# MIT license,Copyright (c) 2019 labplus@Tangliufeng
+
+from mpython import *
+import random, time
+
+WIDTH, HEIGHT = 127, 63
+
+
+class Direction():
+    """
+    贪吃蛇方向,含上下左右
+    """
+
+    UP = 0
+    DOWN = 1
+    LEFT = 2
+    RIGHT = 3
+
+
+class GameState():
+    """
+    游戏状态
+    """
+    PLAYING = 0
+    PAUSE = 1
+    WIN = 2
+    FAIL = 3
+
+
+class Snake():
+    """
+    贪吃蛇
+
+    构建snake
+
+    :param cube(int): 网格大小默认4
+    """
+
+    def __init__(self, cube=4):
+
+        self.cube_width = cube
+        self.grid_width_num, self.grid_height_num = WIDTH // self.cube_width, HEIGHT // self.cube_width
+        self.snake_body = []
+        self.snake_body.append((int(self.grid_width_num // 2 * self.cube_width),
+                                int(self.grid_height_num // 2 * self.cube_width)))  # 添加贪吃蛇的“头”
+        self.food_pos = self.generate_food()
+        self.direction = Direction.LEFT
+
+    def draw_grids(self):
+        """
+        绘制网格
+        """
+        for i in range(self.grid_width_num + 1):
+            oled.vline(self.cube_width * i, 0, HEIGHT, 1)
+
+        for i in range(self.grid_height_num + 1):
+            oled.hline(0, self.cube_width * i, WIDTH, 1)
+
+    def draw_body(self):
+        """
+        绘制snake
+        """
+        for sb in self.snake_body:
+            # pygame.draw.rect(screen, WHITE, (sb[0], sb[1], CUBE_WIDTH, CUBE_WIDTH))
+            oled.fill_rect(sb[0], sb[1], self.cube_width, self.cube_width, 1)
+
+    def generate_food(self):
+        """
+        随机产生一个食物
