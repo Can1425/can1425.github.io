@@ -1,0 +1,66 @@
+x1 = None
+
+x2 = None
+
+g = None
+
+t = None
+
+ct = None
+
+v0 = None
+
+y = None
+
+score = None
+
+from mpython import *
+
+def my_func2():
+    global x1, x2, g, t, score, ct, v0, y
+    x1 = 87
+    x2 = 130
+    g = 4
+    t = 0
+    ct = 0
+    v0 = 0
+    y = 57
+    score = 0
+    while True:
+        oled.fill(0)
+        oled.circle(30, (int(y)), 2, 1)
+        oled.rect(x1, 45, 3, 15, 1)
+        oled.rect(x2, 45, 3, 15, 1)
+        oled.line(0, 60, 127, 60, 1)
+        oled.show()
+        if button_b.value() == 0:
+            v0 = -20
+            ct = 0.5
+        if y > 58:
+            v0 = 0
+            ct = 0
+            y = 57
+            t = 0
+        t = t + ct
+        y = 58 + (v0 * t + (g * t ** 2) / 2)
+        if x1 < 20:
+            score = score + 1
+            x1 = 128
+        x1 = x1 + -1
+        if x2 < 20:
+            score = score + 1
+            x2 = 128
+        x2 = x2 + -1
+        if x1 <= 33 and x1 >= 25 and int(y) >= 43:
+            my_func()
+        if x2 <= 33 and x2 >= 25 and int(y) >= 43:
+            my_func()
+
+def my_func():
+    global x1, x2, g, t, score, ct, v0, y
+    oled.fill(0)
+    oled.DispChar(str(str('游戏结束，您的分数为：') + str((str(score)))), 0, 0, 1)
+    oled.DispChar(str('按 B 键重新开始'), 0, 16, 1)
+    oled.show()
+    if button_b.is_pressed():
+        my_func2()
