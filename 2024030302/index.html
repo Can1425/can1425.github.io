@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>记一次剪映草稿版本降级 | 惟灿 Can1425</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="img/fluid.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.css"><!-- Open Graph--><meta name="description" content="前言欸哈哈哈，今天有点时间，就多更几篇文章吧 恐怕下一篇文章就不知道在什么时候了（） 前几个星期更新了剪映 5.X ，体验了一番一点感觉都没有，所以体验报告就不必写了（）。不过最近一段时间要剪的视频有点多，旧版本时做的草稿也有一些。有一次接着旧版本的草稿在新版本做了一下午，准备导出时…… 剪映！"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2022-05-23 11:42:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: false,
+        limit: 200,
+        expand: false,
+        copy: true,
+    },
+    randomlinks: true,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🔨 设计开发一条龙","🧱 团队小组发动机"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: true,
+        type: 'waline',
+        commentBarrage: true,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: 'https://waline-1-a6137923.deta.app',
+        }
+    },
+    lightbox: 'null',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '我是王卓Sco开发的摘要生成助理ScoGPT，ScoGPT在静态部署时进行摘要的撰写，并且在访客访问时通过ScoCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: false,
+    },
+    music: {
+        enable: false,
+    },
+    translate: undefined,
+};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="aside-list"></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/02/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/05/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/04/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><a class="commentBarrage"><i class="scoicon sco-chat-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">惟灿 Can1425</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">记一次剪映草稿版本降级</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/24_3_5bb4554cb8d210868939903301a837cc.jpg" alt="记一次剪映草稿版本降级"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/经验分享/">经验分享</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tags-name tags-punctuation">软件</span></a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-name tags-punctuation">笔记</span></a><a class="post-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tags-name tags-punctuation">技巧</span></a></div></div></div></div><h1 class="post-title">记一次剪映草稿版本降级</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="meta_posted 2024-03-03 11:51:54"><i class="post-meta-icon scoicon sco-calendar-todo-fill"></i><time datetime="2024-03-03T11:51:54.202Z">2024-03-03T11:51:54.202Z</time></span><span class="post-meta-position" title="作者IP归属地为湖北"><i class="post-meta-icon scoicon sco-map-pin-fill"></i><span>湖北</span></span><a class="post-meta-pv" href="/2024030302/" title="文章热度"><i class="post-meta-icon scoicon sco-fire-fill"></i><span class="waline-pageview-count"><i class="scoicon sco-loading-line"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="scoicon sco-chat-fill"></i><a href="/2024030302/#post-comment"><span class="waline-comment-count"><i class="scoicon sco-loading-line"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欸哈哈哈，今天有点时间，就多更几篇文章吧</p>
+<p>恐怕下一篇文章就不知道在什么时候了（）</p>
+<hr>
+<p>前几个星期更新了剪映 5.X ，体验了一番一点感觉都没有，所以体验报告就不必写了（）。不过最近一段时间要剪的视频有点多，旧版本时做的草稿也有一些。有一次接着旧版本的草稿在新版本做了一下午，准备导出时……</p>
+<p><img src="https://can1425.stfp.site/img/24_3_438e13275a41215c82dc6c151ccb699b.png" alt="赚钱想疯了"></p>
+<p>剪映！！原来的版本不需要钱的功能怎么也收费啊！！</p>
+<p>反正就这么个事，你不仁那我就不义了，降级！</p>
+<h3 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h3><p>我将旧版本覆盖安装之后，新的问题又出现了，当然，也在意料之内</p>
+<p><img src="https://can1425.stfp.site/img/24_3_167a4bae4ee5e212a38f91b19ca6b4df.png" alt="没什么好惊讶的"></p>
+<p>原来也注意过剪映的草稿目录和结构，凭着点经验，开干</p>
+<h2 id="确定剪映草稿文件目录"><a href="#确定剪映草稿文件目录" class="headerlink" title="确定剪映草稿文件目录"></a>确定剪映草稿文件目录</h2><p><img src="https://can1425.stfp.site/img/24_3_f6a26bb662ae0a2cb484fb80b5422775.png" alt="剪映主页"></p>
+<p>点击右上方的设置图标，在菜单中选择 全局设置 ，进入设置界面</p>
+<p><img src="https://can1425.stfp.site/img/24_3_48bf35de0cd0daf9f89d4fbb2a920ef0.png" alt="设置界面"></p>
+<p>点 草稿位置 那儿的文件夹图标，然后将目录位置复制</p>
+<p><img src="https://can1425.stfp.site/img/24_3_1ee0b776ddcee0990af2b5153ad12159.png" alt="目录位置"></p>
+<h2 id="修改草稿配置文件"><a href="#修改草稿配置文件" class="headerlink" title="修改草稿配置文件"></a>修改草稿配置文件</h2><p>进入获取到的目录，根据草稿名找到相对应的文件夹</p>
+<p><img src="https://can1425.stfp.site/img/24_3_95a93eda23d289d95e132680c75908f4.png" alt="文件资源管理器"></p>
+<p>找到<code>draft_content.json</code>文件，右键单击，选择 用记事本打开 （当然你用 IDE 也行）</p>
+<p><img src="https://can1425.stfp.site/img/24_3_3b39cfbbb973c0e463fc445001acce48.png" alt="右键菜单"></p>
+<p>打开文件后，按下<code>Ctrl</code>+<code>F</code>唤出搜索，在搜索框中输入<code>app_version</code>，回车</p>
+<p><img src="https://can1425.stfp.site/img/24_3_cb02f7b69e42323bb817b83cdc41ecdc.png" alt="文本编辑器"></p>
+<p>然后把<code>app_version</code>后的版本号改成自己所需的</p>
+<p>接下来同样的方法搜索<code>new_version</code>，进行修改</p>
+<p><code>Ctrl</code>+<code>S</code>，保存，大功告成！</p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><p>如果你不知道上述所提到的<code>app_version</code>和<code>new_version</code>该填什么，请在旧版本中新建一个项目，在这个草稿的相应地方获取相应的值</p>
+<hr>
+<p>以及，在这个文件中，我还发现了些可以利用的东西，比如你可以获取到某个音乐或字体储存的位置（包括在剪映中下载的）等等，这些我可能在以后分片叙述</p>
+<h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>我这边一个星期前这套方法使用是没什么问题的，不过有部分情况下部分用户反映该方法失效或配置文件被加密，如果这样的话基本上无解了</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="img/fluid.png"></a><div class="post-copyright__author_name">惟灿 Can1425</div><div class="post-copyright__author_desc">四野星辰，春芒复生</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">惟灿 Can1425</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tags-punctuation"></span>软件<span class="tagsPageCount">4</span></a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"></span>笔记<span class="tagsPageCount">3</span></a><a class="post-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tags-punctuation"></span>技巧<span class="tagsPageCount">2</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024030301/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">记一次 Python 转义字符所引起的问题及关于其的学习笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="scoicon sco-star-smile-fill"></i><span>喜欢这篇的人也看了</span><div class="relatedPosts-link"><a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a></div></div><div class="relatedPosts-list"><div><a href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img class="cover" src="/img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg" alt="cover"><div class="content is-center"><div class="title">记一次 Python 转义字符所引起的问题及关于其的学习笔记</div></div></a></div><div><a href="/word/" title="Word 文档编辑技巧"><img class="cover" src="/img/word.jpg" alt="cover"><div class="content is-center"><div class="title">Word 文档编辑技巧</div></div></a></div></div></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="scoicon sco-chat-fill"></i><span> 评论</span><span></span></div><div class="comment-randomInfo"><a onclick="sco.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div id="comment"></div><script>async function initComment() {
+    Waline.init(Object.assign({
+        el: '#comment',
+        serverURL: 'https://waline-1-a6137923.deta.app',
+        pageview: true,
+        dark: 'html[data-theme="dark"]',
+        path: window.location.pathname,
+        search: false,
+        comment: true,
+    }, null))
+}</script></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="img/fluid.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">惟灿 Can1425</div><div class="author-info__desc">四野星辰，春芒复生</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/Can1425" title="Github"><i class="scoicon scoicon sco-github-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="scoicon sco-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%87%BA%E7%8E%B0"><span class="toc-text">问题出现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E5%89%AA%E6%98%A0%E8%8D%89%E7%A8%BF%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="toc-text">确定剪映草稿文件目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%8D%89%E7%A8%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">修改草稿配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-text">小技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-text">一些问题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024030302/" title="记一次剪映草稿版本降级"><img alt="记一次剪映草稿版本降级" src="img/24_3_5bb4554cb8d210868939903301a837cc.jpg"></a><div class="content"><a class="title" href="/2024030302/" title="记一次剪映草稿版本降级">记一次剪映草稿版本降级</a><a class="article-recent_post_categories" href="/2024030302/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img alt="记一次 Python 转义字符所引起的问题及关于其的学习笔记" src="img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg"></a><div class="content"><a class="title" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记">记一次 Python 转义字符所引起的问题及关于其的学习笔记</a><a class="article-recent_post_categories" href="/2024030301/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）"><img alt="Flag OS 介绍（搬运自项目开源仓库）" src="/img/flagos_logo.jpg"></a><div class="content"><a class="title" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）">Flag OS 介绍（搬运自项目开源仓库）</a><a class="article-recent_post_categories" href="/flagos-Introduction/">我的项目</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/ledongmpy/" title="乐动传感器的学习笔记"><img alt="乐动传感器的学习笔记" src="/img/ledongmpy.jpg"></a><div class="content"><a class="title" href="/ledongmpy/" title="乐动传感器的学习笔记">乐动传感器的学习笔记</a><a class="article-recent_post_categories" href="/ledongmpy/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/word/" title="Word 文档编辑技巧"><img alt="Word 文档编辑技巧" src="/img/word.jpg"></a><div class="content"><a class="title" href="/word/" title="Word 文档编辑技巧">Word 文档编辑技巧</a><a class="article-recent_post_categories" href="/word/">经验分享</a></div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">惟灿 Can1425</span></div><div class="footer-bar-description">来自惟灿 Can1425 - 四野星辰，春芒复生的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="img/fluid.png" alt="返回顶部"></div></div><div id="sco-footer"><div class="footer-group"><div class="footer-title-group"><h3 class="footer-title">友链</h3><a class="random-friends-btn" href="javascript:randomLinksList();"><i class="scoicon sco-refresh-line"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2024 By&nbsp;<a class="footer-bar-link" href="/">惟灿 Can1425</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="scoicon sco-chat-new-fill"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://music.163.com/#/playlist?id=8407304077', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-commentBarrage"><i class="scoicon sco-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.js"></script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/waterfall.min.js"></script><script src="https://cdn.staticfile.org/waline/2.15.8/waline.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.8/waline.min.css"><script src="/js/comment/waline_commentBarrage.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script></div><div id="js-pjax"><script async src="https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.min.js"></script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: 'post',
+    toc: true,
+    comment: true,
+}
+</script></div><script>const links = [{"name":"张洪Heo","link":"https://blog.zhheo.com/"}]
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    utils.snackbarShow('您即将前往 ⌈ ' + link.name + ' ⌋ , 安全性未知', false, 3000);
+    setTimeout(() => {
+        window.open(link.link, "_blank")
+    }, 3000)
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
+
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
+}</script><!-- newest comment--><script>window.addEventListener('load', () => {
+    const changeContent = (content) => {
+        if (content === '') return content;
+
+        const replacements = [
+            {regex: /<img.*?src="(.*?)"?[^\>]+>/ig, replacement: '[图片]'},
+            {regex: /<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, replacement: '[链接]'},
+            {regex: /<pre><code>.*?<\/pre>/gi, replacement: '[代码]'},
+            {regex: /<[^>]+>/g, replacement: ""}
+        ];
+
+        content = replacements.reduce((str, {regex, replacement}) => str.replace(regex, replacement), content);
+
+        return content.length > 150 ? content.substring(0, 150) + '...' : content;
+    }
+
+    const $asideList = document.querySelector('#card-newest-comments .aside-list')
+    const newestCommentInit = () => {
+        if ($asideList) {
+            getComment()
+        }
+    }
+    const getComment = () => {
+        Waline.RecentComments(
+            options = {
+                serverURL: GLOBAL_CONFIG.comment.waline.url,
+                count: 6,
+            }
+        ).then(function (res) {
+            const walineArray = res.comments.map(item => ({
+                'content': changeContent(item.comment),
+                'avatar': item.avatar,
+                'nick': item.nick,
+                'url': `${item.url}#${item.objectId}`,
+                'date': new Date(item.insertedAt).toISOString()
+            }))
+            generateHtml(walineArray)
+        }).catch(
+            $asideList.innerHTML = "无法获取评论，请确认相关配置是否正确"
+        )
+    }
+
+    const generateHtml = array => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML = array.length ? array.map(item => `
+            <div class='aside-list-item'>
+              <a href='${item.url}' class='thumbnail'>
+                <img src='${item.avatar}' alt='${item.nick}'>
+                <div class='name'><span>${item.nick}</span></div>
+              </a>
+              <div class='content'>
+                <a class='comment' href='${item.url}'>${item.content}</a>
+                <time class="datetime" datetime="${item.date}"></time>
+              </div>
+            </div>
+          `).join('') : '没有评论'
+        window.lazyLoadInstance && window.lazyLoadInstance.update()
+        window.pjax && window.pjax.refresh($dom)
+        changeTimeFormat()
+    }
+
+    newestCommentInit()
+})</script><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><!-- music--></body></html><script>const posts=["2024030302/","2024030301/","flagos-Introduction/","ledongmpy/","word/","qinglian/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>

@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>清廉家风的故事 - 鲁迅，钱基博，梁启超，胡适 | 惟灿 Can1425</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="img/fluid.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.css"><!-- Open Graph--><meta name="description" content="鲁迅鲁迅和许广平仅有一子，即周海婴。儿子出生时，许广平出现难产迹象，当医生向鲁迅征求意见是留大人还是留孩子时，他果断回答：“留大人。”结果母子平安。 在儿子成长过程中，鲁迅基本按照《我们现在怎样做父亲》的思想来实行，让他“完全的解放”，其中又说：“我现在心以为然的，便只是爱。”据周海婴所著《鲁迅与我"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2022-05-23 11:42:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: false,
+        limit: 200,
+        expand: false,
+        copy: true,
+    },
+    randomlinks: true,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🔨 设计开发一条龙","🧱 团队小组发动机"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: true,
+        type: 'waline',
+        commentBarrage: true,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: 'https://waline-1-a6137923.deta.app',
+        }
+    },
+    lightbox: 'null',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '我是王卓Sco开发的摘要生成助理ScoGPT，ScoGPT在静态部署时进行摘要的撰写，并且在访客访问时通过ScoCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: false,
+    },
+    music: {
+        enable: false,
+    },
+    translate: undefined,
+};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="aside-list"></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/02/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/05/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/04/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><a class="commentBarrage"><i class="scoicon sco-chat-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">惟灿 Can1425</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">清廉家风的故事 - 鲁迅，钱基博，梁启超，胡适</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/qinglian.jpg" alt="清廉家风的故事 - 鲁迅，钱基博，梁启超，胡适"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/文学故事/">文学故事</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/"><span class="tags-name tags-punctuation">学习</span></a><a class="post-meta__tags" href="/tags/%E6%95%85%E4%BA%8B/"><span class="tags-name tags-punctuation">故事</span></a><a class="post-meta__tags" href="/tags/%E6%96%87%E5%AD%A6/"><span class="tags-name tags-punctuation">文学</span></a></div></div></div></div><h1 class="post-title">清廉家风的故事 - 鲁迅，钱基博，梁启超，胡适</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="meta_posted 2023-03-06 00:00:00"><i class="post-meta-icon scoicon sco-calendar-todo-fill"></i><time datetime="2023-03-06T00:00:00.000Z">2023-03-06T00:00:00.000Z</time></span><span class="post-meta-position" title="作者IP归属地为湖北"><i class="post-meta-icon scoicon sco-map-pin-fill"></i><span>湖北</span></span><a class="post-meta-pv" href="/qinglian/" title="文章热度"><i class="post-meta-icon scoicon sco-fire-fill"></i><span class="waline-pageview-count"><i class="scoicon sco-loading-line"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="scoicon sco-chat-fill"></i><a href="/qinglian/#post-comment"><span class="waline-comment-count"><i class="scoicon sco-loading-line"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="鲁迅"><a href="#鲁迅" class="headerlink" title="鲁迅"></a>鲁迅</h2><p>鲁迅和许广平仅有一子，即周海婴。儿子出生时，许广平出现难产迹象，当医生向鲁迅征求意见是留大人还是留孩子时，他果断回答：“留大人。”结果母子平安。</p>
+<p>在儿子成长过程中，鲁迅基本按照《我们现在怎样做父亲》的思想来实行，让他“完全的解放”，其中又说：“我现在心以为然的，便只是爱。”据周海婴所著《鲁迅与我七十年》介绍，鲁迅的教育方式是“顺其自然，极力不多给他打击，甚或不愿拂逆他的喜爱，除非在极不能容忍，极不合理的某一程度之内”。有一天，周海婴死活去上学，鲁迅用报纸打他屁股。后来推荐迅向母亲写信解释道：“打起来，声音虽然响，却不痛的。”</p>
+<h2 id="钱基博"><a href="#钱基博" class="headerlink" title="钱基博"></a>钱基博</h2><p>钱基博乃一代国学大师，是学者、作家钱钟书的父亲。</p>
+<p>钱基博对儿子管教极严，钱钟书十六岁时，还痛打一顿。1926年秋至次年夏天，钱基博北上清华任教，寒假没回无锡。此时的钱钟书正读中学，没有温习课本，而是一头扎进了小说的世界。等父亲回来考问功课，钱钟书过不了关，于是挨了打。 1929年，钱钟书考入清华大学外文系后，钱基博还时常写信给他。一封信中说：做一仁人君子，比做一名士尤切要。”随后一封信则表示：“现在外间物论，谓汝文章胜我，学问过我，我固心喜；然不如人称汝笃实过我，力行过我，我尤心慰。”希望钱钟书能“淡泊明志，宁静致远。我望汝为诸葛公、陶渊明；不喜汝为胡适之、徐志摩”。 钱基博对当时的新文化运动保持距离，埋首国学，他这样告诫钱钟书，不过出于一个儒者的文化立场。</p>
+<h2 id="梁启超"><a href="#梁启超" class="headerlink" title="梁启超"></a>梁启超</h2><p>梁启超有九个子女，在他的教育、引导下，个个成为某一领域的专家，甚至还产生了“一门三院士”的佳话。这“三院士”是建筑学家梁思成、考古学家梁思永、火箭控制系统专家梁思礼。另外，四儿子梁思达是经济学家，次女梁思庄是图书馆学家，三女儿梁思懿是社会活动家。 梁启超对于子女的爱，是全方位的，不仅在求学，而且在为人处世，甚至理财、时政等诸多方面，皆以平和、平等的态度展开。阅读《梁启超家书》 就会了解在写给孩子们的信中梁启超教育子女的表现堪称典范。 写信时，梁启超毫不掩饰自己的爱。1927年6月的一封信中，他写道：“你们须知你爹爹是最富于感情的人，对于你们的爱情，十二分热烈。你们无论功课若何忙迫，最少隔个把月总要来一封信，便几 字报报平安也好。</p>
+<p>在求学这一方面，梁启超根本不看重文凭，而是强调打好基础，掌握好“火候”。他对梁思庄说：“未能立进大学，这有什么要紧，‘求学问不是求文凭’，总要把墙基越筑得厚越好。”并教孩子们求学问、做学问的方法–”总要’猛火炖’和’慢火炖’两种工作循环交互着用去”。 同时，梁启超强调责任的重要。1923年，他写给长女梁思顺的信中说：“天下事业无所谓大小，只要在自己责任内，尽自己力量做去，便是第一等人物。”当然，写信教导自己的孩子之余，梁任公没忘了夸一夸女婿、儿媳。 1918年11月7日，自杀前三天，梁济问儿子梁漱溟：“这个世界会好吗?”时在北京大学任哲学讲师的梁漱溟回答：“我相信世界是一天一天往好里去的。””能好就好啊!”说罢，梁济离开了家。 梁漱溟亦两度欲自杀，但最终，现实中国的问题和人生问题萦绕着他，他不停思考，积极奔走。梁漱溟育有二子梁培宽、梁培恕，对于他们，给予最大自由空间。接受采访时，梁培恕说：“我们受到的可能是最自由的教育，拥有了别人没有的最大的自主权。”这种教育，也与梁漱溟受到梁济的影响有关，梁济对他就是“信任任”的。可以说，这也是一种“中国式传家“。 梁培宽追忆梁漱溟时，时常会提到一次考试。当时，梁培宽考了59分，内心忐忑地拿着学校要求补考的通知给父亲看。“他只看了一眼，就又还给了我。”梁培宽说，他后来明白父亲的用意，“自己的事情自己负责”。 相比于课堂成绩，梁漱溟更在意教人过社会生活，“生活本身的教育”。</p>
+<h2 id="胡适"><a href="#胡适" class="headerlink" title="胡适"></a>胡适</h2><p>胡适和妻子江冬秀育有三个子女，女儿五岁时夭折，长子胡祖望、小儿子胡思杜围绕在江冬秀身边，胡适忙于公务，无暇顾及。江冬秀虽然出身官宦之家，但仅读了几年私塾，又酷爱打牌，对于孩子的管教，少投入精力，多有责怪，不甚得法。在家庭教育中，胡适虽然倡导“独立、合群、重学”，但自身也有不懂得如何爱孩子的嫌疑。1929年，胡适给胡祖望写信，希望锻炼他过独立、合群、用功读书的生活，其中说：“功课及格，那算什么?在一班要赶在一班最高一排，在一校要赶在一校最高一排。功课要考最优等，品行要列最优等，做人要做最上等的人，这才是有志气的孩子。”这时，胡祖望十岁，离开父母，独自在外上学，父亲如此高的期望，恐怕只会感到“压力山大”。次年，胡适即大失所望，接到学校发来的”成绩欠佳”的报告单，怒道：“你的成绩有八个’4’，这是最坏的成绩。你不觉得可耻吗?你自己这表。最终，胡祖望虽然上过大学，但远未达到胡适对他的期望；胡思杜读了两所大学都未能毕业，却染上了不少坏习气。晚年，胡适对秘书说：“娶太太，一定要受过高等教育的；受了高等教育的太太，就是别的方面有缺点，但对子女一定会好好管理教养的。母亲有耐心，孩子没有教不好的；孩子教不好，那是做母亲的没有耐心的关系。可谓沉痛之语，意味深长。 在给江冬秀的信中，胡适亦自我反省道：“我真有点不配做老子。平时不同他们亲热，只晓得责怪他们功课不好，习气不好。祖望你交给我，不要骂他，要同他做朋友。 丰子恺育有七个子女，他认为童年是人生的黄金时代，极力反对把孩子培养成“小大人”。在生活中，丰子恺称外出做事为“无聊”和孩子们在一起则内心充满欢喜，抱孩子，喂孩子吃饭，唱小曲逗孩子，画画引孩子笑，和孩子们特别亲近。有一次，长子瞻瞻要丰子恺抱他到车站去买香蕉，“满满地擒了两手回来”，到家时，却熟睡在父亲肩头，手里的香蕉早已不知去向。丰子恺在《给我的孩子们》一文中感叹：“这是何等可佩服的真率、自然与热情!大人间的所谓’沉默’、‘含蓄’、’深刻’的美德，比起”来，全是不自然的、病的、伪的!” 除了让孩子在爱的空气中自由成长，丰子恺还重视培养孩子的独立精神。1947年，他步入知天命之年，与子女”约法”，强调最多的便是“独立”，其中一条写道：“大学毕业后，子女各自独立生活，并无供养父母之义务，父母亦更无供给子女之义务。同时，子女独立后，要与父母分居，“双方同意而同居者，皆属邻谊性质，绝非义务”。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="img/fluid.png"></a><div class="post-copyright__author_name">惟灿 Can1425</div><div class="post-copyright__author_desc">四野星辰，春芒复生</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">惟灿 Can1425</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/"><span class="tags-punctuation"></span>学习<span class="tagsPageCount">3</span></a><a class="post-meta__tags" href="/tags/%E6%95%85%E4%BA%8B/"><span class="tags-punctuation"></span>故事<span class="tagsPageCount">1</span></a><a class="post-meta__tags" href="/tags/%E6%96%87%E5%AD%A6/"><span class="tags-punctuation"></span>文学<span class="tagsPageCount">1</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/word/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Word 文档编辑技巧</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="scoicon sco-star-smile-fill"></i><span>喜欢这篇的人也看了</span><div class="relatedPosts-link"><a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a></div></div><div class="relatedPosts-list"><div><a href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img class="cover" src="/img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg" alt="cover"><div class="content is-center"><div class="title">记一次 Python 转义字符所引起的问题及关于其的学习笔记</div></div></a></div><div><a href="/ledongmpy/" title="乐动传感器的学习笔记"><img class="cover" src="/img/ledongmpy.jpg" alt="cover"><div class="content is-center"><div class="title">乐动传感器的学习笔记</div></div></a></div></div></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="scoicon sco-chat-fill"></i><span> 评论</span><span></span></div><div class="comment-randomInfo"><a onclick="sco.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div id="comment"></div><script>async function initComment() {
+    Waline.init(Object.assign({
+        el: '#comment',
+        serverURL: 'https://waline-1-a6137923.deta.app',
+        pageview: true,
+        dark: 'html[data-theme="dark"]',
+        path: window.location.pathname,
+        search: false,
+        comment: true,
+    }, null))
+}</script></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="img/fluid.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">惟灿 Can1425</div><div class="author-info__desc">四野星辰，春芒复生</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/Can1425" title="Github"><i class="scoicon scoicon sco-github-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="scoicon sco-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B2%81%E8%BF%85"><span class="toc-text">鲁迅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%B1%E5%9F%BA%E5%8D%9A"><span class="toc-text">钱基博</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A2%81%E5%90%AF%E8%B6%85"><span class="toc-text">梁启超</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%A1%E9%80%82"><span class="toc-text">胡适</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024030302/" title="记一次剪映草稿版本降级"><img alt="记一次剪映草稿版本降级" src="img/24_3_5bb4554cb8d210868939903301a837cc.jpg"></a><div class="content"><a class="title" href="/2024030302/" title="记一次剪映草稿版本降级">记一次剪映草稿版本降级</a><a class="article-recent_post_categories" href="/2024030302/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img alt="记一次 Python 转义字符所引起的问题及关于其的学习笔记" src="img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg"></a><div class="content"><a class="title" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记">记一次 Python 转义字符所引起的问题及关于其的学习笔记</a><a class="article-recent_post_categories" href="/2024030301/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）"><img alt="Flag OS 介绍（搬运自项目开源仓库）" src="/img/flagos_logo.jpg"></a><div class="content"><a class="title" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）">Flag OS 介绍（搬运自项目开源仓库）</a><a class="article-recent_post_categories" href="/flagos-Introduction/">我的项目</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/ledongmpy/" title="乐动传感器的学习笔记"><img alt="乐动传感器的学习笔记" src="/img/ledongmpy.jpg"></a><div class="content"><a class="title" href="/ledongmpy/" title="乐动传感器的学习笔记">乐动传感器的学习笔记</a><a class="article-recent_post_categories" href="/ledongmpy/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/word/" title="Word 文档编辑技巧"><img alt="Word 文档编辑技巧" src="/img/word.jpg"></a><div class="content"><a class="title" href="/word/" title="Word 文档编辑技巧">Word 文档编辑技巧</a><a class="article-recent_post_categories" href="/word/">经验分享</a></div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">惟灿 Can1425</span></div><div class="footer-bar-description">来自惟灿 Can1425 - 四野星辰，春芒复生的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="img/fluid.png" alt="返回顶部"></div></div><div id="sco-footer"><div class="footer-group"><div class="footer-title-group"><h3 class="footer-title">友链</h3><a class="random-friends-btn" href="javascript:randomLinksList();"><i class="scoicon sco-refresh-line"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2024 By&nbsp;<a class="footer-bar-link" href="/">惟灿 Can1425</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="scoicon sco-chat-new-fill"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://music.163.com/#/playlist?id=8407304077', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-commentBarrage"><i class="scoicon sco-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.js"></script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/waterfall.min.js"></script><script src="https://cdn.staticfile.org/waline/2.15.8/waline.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.8/waline.min.css"><script src="/js/comment/waline_commentBarrage.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script></div><div id="js-pjax"><script async src="https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.min.js"></script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: 'post',
+    toc: true,
+    comment: true,
+}
+</script></div><script>const links = [{"name":"张洪Heo","link":"https://blog.zhheo.com/"}]
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    utils.snackbarShow('您即将前往 ⌈ ' + link.name + ' ⌋ , 安全性未知', false, 3000);
+    setTimeout(() => {
+        window.open(link.link, "_blank")
+    }, 3000)
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
+
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
+}</script><!-- newest comment--><script>window.addEventListener('load', () => {
+    const changeContent = (content) => {
+        if (content === '') return content;
+
+        const replacements = [
+            {regex: /<img.*?src="(.*?)"?[^\>]+>/ig, replacement: '[图片]'},
+            {regex: /<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, replacement: '[链接]'},
+            {regex: /<pre><code>.*?<\/pre>/gi, replacement: '[代码]'},
+            {regex: /<[^>]+>/g, replacement: ""}
+        ];
+
+        content = replacements.reduce((str, {regex, replacement}) => str.replace(regex, replacement), content);
+
+        return content.length > 150 ? content.substring(0, 150) + '...' : content;
+    }
+
+    const $asideList = document.querySelector('#card-newest-comments .aside-list')
+    const newestCommentInit = () => {
+        if ($asideList) {
+            getComment()
+        }
+    }
+    const getComment = () => {
+        Waline.RecentComments(
+            options = {
+                serverURL: GLOBAL_CONFIG.comment.waline.url,
+                count: 6,
+            }
+        ).then(function (res) {
+            const walineArray = res.comments.map(item => ({
+                'content': changeContent(item.comment),
+                'avatar': item.avatar,
+                'nick': item.nick,
+                'url': `${item.url}#${item.objectId}`,
+                'date': new Date(item.insertedAt).toISOString()
+            }))
+            generateHtml(walineArray)
+        }).catch(
+            $asideList.innerHTML = "无法获取评论，请确认相关配置是否正确"
+        )
+    }
+
+    const generateHtml = array => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML = array.length ? array.map(item => `
+            <div class='aside-list-item'>
+              <a href='${item.url}' class='thumbnail'>
+                <img src='${item.avatar}' alt='${item.nick}'>
+                <div class='name'><span>${item.nick}</span></div>
+              </a>
+              <div class='content'>
+                <a class='comment' href='${item.url}'>${item.content}</a>
+                <time class="datetime" datetime="${item.date}"></time>
+              </div>
+            </div>
+          `).join('') : '没有评论'
+        window.lazyLoadInstance && window.lazyLoadInstance.update()
+        window.pjax && window.pjax.refresh($dom)
+        changeTimeFormat()
+    }
+
+    newestCommentInit()
+})</script><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><!-- music--></body></html><script>const posts=["2024030302/","2024030301/","flagos-Introduction/","ledongmpy/","word/","qinglian/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>

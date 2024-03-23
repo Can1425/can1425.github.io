@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Word 文档编辑技巧 | 惟灿 Can1425</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="img/fluid.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.css"><!-- Open Graph--><meta name="description" content="下面以“标书”编写为例 标书编写中会用到的功能分析标书的编写过程中最为核心的要求是满足招标文件的要求。 其次是要满足审美的要求，虽然每个人的审美原则不尽相同，但依然有以下标书审美共识： ——页面布局合理； 具有清晰可辨的页眉页脚；页码编制清晰；行文格式一致；各要点标题清晰；目录清晰；图片摆放美观"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2022-05-23 11:42:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: false,
+        limit: 200,
+        expand: false,
+        copy: true,
+    },
+    randomlinks: true,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🔨 设计开发一条龙","🧱 团队小组发动机"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: true,
+        type: 'waline',
+        commentBarrage: true,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: 'https://waline-1-a6137923.deta.app',
+        }
+    },
+    lightbox: 'null',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '我是王卓Sco开发的摘要生成助理ScoGPT，ScoGPT在静态部署时进行摘要的撰写，并且在访客访问时通过ScoCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: false,
+    },
+    music: {
+        enable: false,
+    },
+    translate: undefined,
+};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="aside-list"></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2024/02/')" href="javascript:void(0);"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/05/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/04/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/03/')" href="javascript:void(0);"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><a class="commentBarrage"><i class="scoicon sco-chat-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>4</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/">开发<sup>3</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>3</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/">技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件<sup>2</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E6%95%85%E4%BA%8B/">故事<sup>1</sup></a><a href="/tags/%E6%96%87%E5%AD%A6/">文学<sup>1</sup></a><a href="/tags/Word/">Word<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC/">办公<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">惟灿 Can1425</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Word 文档编辑技巧</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="scoicon sco-gift-fill"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="scoicon sco-laptop-line"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/word.jpg" alt="Word 文档编辑技巧"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为转载或翻译文章，注意版权协议">转载或翻译</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/经验分享/">经验分享</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tags-name tags-punctuation">软件</span></a><a class="post-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tags-name tags-punctuation">技巧</span></a><a class="post-meta__tags" href="/tags/Word/"><span class="tags-name tags-punctuation">Word</span></a><a class="post-meta__tags" href="/tags/%E5%8A%9E%E5%85%AC/"><span class="tags-name tags-punctuation">办公</span></a></div></div></div></div><h1 class="post-title">Word 文档编辑技巧</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="meta_posted 2023-04-06 00:00:00"><i class="post-meta-icon scoicon sco-calendar-todo-fill"></i><time datetime="2023-04-06T00:00:00.000Z">2023-04-06T00:00:00.000Z</time></span><span class="post-meta-position" title="作者IP归属地为湖北"><i class="post-meta-icon scoicon sco-map-pin-fill"></i><span>湖北</span></span><a class="post-meta-pv" href="/word/" title="文章热度"><i class="post-meta-icon scoicon sco-fire-fill"></i><span class="waline-pageview-count"><i class="scoicon sco-loading-line"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="scoicon sco-chat-fill"></i><a href="/word/#post-comment"><span class="waline-comment-count"><i class="scoicon sco-loading-line"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>下面以“标书”编写为例</p>
+</blockquote>
+<h2 id="标书编写中会用到的功能分析"><a href="#标书编写中会用到的功能分析" class="headerlink" title="标书编写中会用到的功能分析"></a>标书编写中会用到的功能分析</h2><p>标书的编写过程中最为核心的要求是满足招标文件的要求。</p>
+<p>其次是要满足审美的要求，虽然每个人的审美原则不尽相同，但依然有以下标书审美共识：</p>
+<p>——页面布局合理； 具有清晰可辨的页眉页脚；页码编制清晰；行文格式一致；各要点标题清晰；目录清晰；图片摆放美观，符合主题风格；表格美观；封面美观 根据以上需求的分析，标书制作人员至少需掌握以上所涉及对象的调整和操作方法，才可以制作出满足审美共识的标书。</p>
+<h2 id="调整页面布局"><a href="#调整页面布局" class="headerlink" title="调整页面布局"></a>调整页面布局</h2><p>标书编写过程中用到的页面布局调整主要是页边距、纸张方向和分页。</p>
+<h3 id="调整页边距"><a href="#调整页边距" class="headerlink" title="调整页边距"></a>调整页边距</h3><p>调整页边距可在Word菜单栏中选择页面布局，在页面设置栏目下点击页边距下方下拉选单，选择页边距方案，或自定义页边距。一般为美观及装订方便，装订侧（一般为左侧）需留出一定余量。（推荐A4页边距为上：2.4cm，下：2.4cm，左：3.2cm，右2.4cm。）</p>
+<h3 id="纸张方向与插入分节符"><a href="#纸张方向与插入分节符" class="headerlink" title="纸张方向与插入分节符"></a>纸张方向与插入分节符</h3><p>一般标书中可能遇到需要插入宽度较宽的表格的情况（报价表、描述表、业绩表等），此时可以将纸张方向设为横向。</p>
+<p>注意，纸张方向的调整对象是按照整节为单位来调整的，故在调整前，需先插入分节符后再调整。</p>
+<p>要插入分节符，在页面布局栏中页面设置栏目下点击分隔符，选择分节符中“下一页”。 选中在分节符后，页码任意位置，即可对本节纸张方向进行操作。选择页面布局栏目中页面设置栏目下，选择纸张方向，选择横向。</p>
+<p>同理，如需变回纵向，也需添加分节符后进行操作，选择纸张方向纵向。</p>
+<h3 id="插入分页符"><a href="#插入分页符" class="headerlink" title="插入分页符"></a>插入分页符</h3><p>为了标书的简洁美观，标题一般另起新页编写。此时如在标题和之前已有内容之间使用空格方式保留空白，会在修改之前内容时影响后续布局。此时可在之前内容结尾处插入分页符。选择插入栏目下的页栏目中的分页选项可以添加分页符，或使用快捷键Ctrl+Enter。</p>
+<p>插入分页符后，光标会自行移至下一页起始位置，并且在改变分页符前内容时，不会对下一页内容的字符位置造成影响。</p>
+<blockquote>
+<p>注意：上述“插入分节符”也可以达到相同效果，但因分节经常会影响其他项目如页眉脚、页边距、纸张方向等内容，建议除在页码不连续或不在第一页起始，或者需要调整纸张方向外，不建议添加分节符。</p>
+</blockquote>
+<h3 id="页眉页脚的添加"><a href="#页眉页脚的添加" class="headerlink" title="页眉页脚的添加"></a>页眉页脚的添加</h3><p>标书文件中，经常会添加页眉页脚，页眉页脚中包含了LOGO、项目信息、页码等内容。要添加页眉页脚，可选择插入栏目下，页眉和页脚栏目中，选择相应项下拉选单，选择固有样式添加。添加后可对页眉页脚进行编辑。也可双击页眉或页脚区域，此时即可直接进行编辑。</p>
+<p>因为复制文档等操作，可能造成页眉页脚内容与之前内容不一致（如源文档中存在分节符等原因）。此时可双击页眉页脚进入编辑模式，在设计栏目下，导航栏目中，勾选连接到前一条页眉&#x2F;页脚即可与上一节一致。 要清除页眉页脚，可选择插入栏目下，页眉和页脚栏目中，选择相应项下拉选单中，删除页眉或页脚即可。页眉残留线可选中页眉页脚编辑模式后，在快捷样式列表的下拉菜单中选择清除样式清除。 页眉页脚与上下页边距离可在页眉页脚编辑模式中，设计栏目下，位置栏目中调整。</p>
+<h3 id="插入页码"><a href="#插入页码" class="headerlink" title="插入页码"></a>插入页码</h3><p>页码是投标文件必不可少的内容，一般如无特殊要求，页码需连续编制。要插入页码，可以在插入栏目下，页眉页脚栏目中选择页码下拉选单，选择在页面顶端、底端、页边距或光标选定的当前位置添加，并在二级选单中选择样式。插入后的页码可以如常进行字体字号设置。</p>
+<p>经常遇到的问题是，需在目录后重新起始页码。</p>
+<p>此时，可在目录后添加分节符，再选中欲重新起始的页码，在设计栏目下，页眉和页脚栏目中，选择页码下拉选单，选择设置页码格式，在页码页码编号中，选择起始页码，输入起始页码。</p>
+<h2 id="字体和段落"><a href="#字体和段落" class="headerlink" title="字体和段落"></a>字体和段落</h2><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>字体的调整在开始菜单中，字体菜单中内容比较简单，不再赘述，需注意尽量做到全篇正文字体字号一致，包括西文字体。</p>
+<p>先选中要改变字体区域，然后在字体菜单中确定中文字体，之后再选择想要设置的西文字体，这样西文字体不会覆盖掉原中文字体。但如果顺序相反，西文字体可能会被中文字体覆盖。</p>
+<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>段落中需注意，尽可能保持行距一致，减少使用自动编号，自动编号会影响可复制性。 开始栏目下，段落栏目中的右下角箭头，进行详细设置。其中需注意常规中大纲级别项目，此项目可以将选中内容在文档结构图中已相应级别显示，也可用于将从他处复制内容转换正文，已避免在文档结构图中显示，或在目录中出现。但该项无法修改使用了”样式”的内容的大纲级别。</p>
+<h2 id="样式和标题隔页"><a href="#样式和标题隔页" class="headerlink" title="样式和标题隔页"></a>样式和标题隔页</h2><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>使用快捷样式设置标题可以使同一级标题的字体、段落格式统一，也能大大节省调节时间。</p>
+<p>一般样式中提供了一级和二级标题的样式，如使用了二级标题，会自动出现三级标题。要应用样式，可以选中要设置的内容后，点击相应样式图样。</p>
+<p>可以在样式图样上点击右键，在弹出菜单中选择修改，修改样式的字体、段落等内容。也可以将样式直接设置为某段文档的字体和样式，在样式图样上点击右键，选择更新”样式”以匹配所选内容即可。可以在样式右下角箭头项目中选择其他文档中样式进行样式修改。目前样式中会出现拷贝至其他文档中后会替换其他文档中样式等问题，还有待解决。现阶段不推荐将正文的样式进行修改，以免影响文档的可复制性。</p>
+<h3 id="标题隔页"><a href="#标题隔页" class="headerlink" title="标题隔页"></a>标题隔页</h3><p>可以具有隔页作用，在操作中也注意到，多级标题如在同一页中，对于正文格式的美观有一定影响，也不利于图片、表格的插入。建议无特殊情况，使用隔页的方式添加标题。</p>
+<p>隔页的方式指一页中只有标题，无正文，要做到隔页，可使用分页符或分节符。另外标题在其所占页码中的位置值得注意，一般取垂直中上位置，水平居中，建议采用添加空白行方式，不建议采用段落中设置段前若干行方式。</p>
+<h2 id="插入目录"><a href="#插入目录" class="headerlink" title="插入目录"></a>插入目录</h2><p>要插入目录，选择引用栏目下，目录栏目中，目录下拉选单。</p>
+<p>使用自动目录，Word会依据大纲级别生成目录。目录更新有两种方式，一种只更新页码，一种将更新全部目录。</p>
+<blockquote>
+<p>注意：更新全部目录时，字体和段落也会有变化。 也可在目录下拉菜单中的插入目录选项板中进行设置，具体内容本人使用不多，各位可自己尝试。</p>
+</blockquote>
+<h2 id="插入图片注意事项"><a href="#插入图片注意事项" class="headerlink" title="插入图片注意事项"></a>插入图片注意事项</h2><p>要从外部插入图片有多种方式，下面介绍三种方式。</p>
+<ul>
+<li>方式一：将光标放在要插入图片位置，选择插入栏目下的插图栏目中，图片选项。</li>
+<li>方式二：选中图片文件直接拖入文档中要插入图片位置。</li>
+<li>方式三：用WINDOWS右键菜单中的复制功能复制图片后，将光标放在要插入图片位置，后粘贴。</li>
+</ul>
+<blockquote>
+<p>以上方法中，前两种插入后，图片若大于页面，会受到页边距限制按比例缩小。第三种方法，插入后图片保持图片原大小。图片插入后，建议环绕方式为嵌入式，建议加边框。</p>
+</blockquote>
+<h2 id="插入表格注意事项"><a href="#插入表格注意事项" class="headerlink" title="插入表格注意事项"></a>插入表格注意事项</h2><p>表格的插入一般有两种方式：使用EXCEL处理后的表格；使用Word插入表格</p>
+<blockquote>
+<p>注意：EXCEL复制的表格样式需重新调节 表格的调节主要是表格中字体和段落的调节，表格样式的调节。</p>
+</blockquote>
+<p>可在选中表格后出现的设计及布局栏目下，对表格的各项内容进行调节，具体内容可自行尝试。</p>
+<p>要清除表格，可已使用右键，剪切的方式，或者选中表格后再加选部分文档一起按Delete键删除。</p>
+<h2 id="封面注意事项"><a href="#封面注意事项" class="headerlink" title="封面注意事项"></a>封面注意事项</h2><p>封面内容须包含招标文件的全部要求，且布局合理。</p>
+<p>封面中经常会用到包含正本或副本字样的文本框。</p>
+<p>要插入文本框，选择插入栏目下，文本栏目中，文本框下拉列表，一般使用简单本框即可。文本框默认为浮于文字上方，可在文档中任意调整位置和大小。</p>
+<h2 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h2><h3 id="文件的大小"><a href="#文件的大小" class="headerlink" title="文件的大小"></a>文件的大小</h3><p>一般标书文件根据图片多少，大小不同，一般在20M-60M左右，如文件过大，可能造成机器运行缓慢，容易死机等问题。如文件过大，建议分册制作，注意页码连续。如有可能，尽量对较大图片进行压缩后再插入。</p>
+<h3 id="标点符号的正确使用"><a href="#标点符号的正确使用" class="headerlink" title="标点符号的正确使用"></a>标点符号的正确使用</h3><p>请注意正确使用中文、英文标点符号，原则上标题中，数字标题后应使用西文标点或不加标点。</p>
+<h3 id="标书格式的总体设计"><a href="#标书格式的总体设计" class="headerlink" title="标书格式的总体设计"></a>标书格式的总体设计</h3><p>编制标书前，需对以下内容予以明确，避免格式不一致：</p>
+<p>页边距；页眉页脚；中文字体，西文字体；各级标题字体、字号、编号形式；标题前空行（字号、行数、行距、段前段后）；正文字体、字号、行距、段前段后；表格字体、字号、行距、段前段后；表格行高；表格列宽选择依据；图片边框（线性、粗细）宽度要求、插入方式（嵌入型或者附于文字上方，为排版而进行的四周型等）；图片排版的其他要求（荣誉证书两个一页等）；加黑或斜体使用依据；为美观而调整时的依据（如少于多少行可以酌情修改以避免页面空白，表格字号的酌情调整等</p>
+<h3 id="兼容文档的转换"><a href="#兼容文档的转换" class="headerlink" title="兼容文档的转换"></a>兼容文档的转换</h3><p>现在大部分公司要求用Word2007，但客户和集成商普遍使用Word2003系统，考虑到兼容性问题，在提供给客户或集成商前，如无特殊要求，须转换为Word2003兼容模式。要转换为Word2003兼容文档，可在Word选单(左上角)中另存为选单中选择Word97-2003兼容文档。兼容文档后缀为.doc，Word2007文档后缀为.docx</p>
+<h3 id="提高效率的进阶功能"><a href="#提高效率的进阶功能" class="headerlink" title="提高效率的进阶功能"></a>提高效率的进阶功能</h3><p>通过前面内容的技能，已可以满足标书编制的基本需求，本章对使用经验技巧和合理安排工作流程进行探讨。</p>
+<blockquote>
+<p>常用快捷键 Ctrl+A包含整篇文档</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+C复制所选文本或对象</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+X剪切所选文本或对象</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+V粘贴文本或对象</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Z撤消上一操作</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Y重复上一操作</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+F 查找文字、格式和特殊项</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+S保存文档</p>
+</blockquote>
+<blockquote>
+<p>Shift+F5 返回上次修改位置</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+B使字符变为粗体</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+I使字符变为斜体</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+U为字符添加下划线</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Shift+&lt;缩小字号</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Shift+&gt;增大字号</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+E段落居中</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+J两端对齐</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+L左对齐</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+R右对齐</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Enter分页符</p>
+</blockquote>
+<h3 id="显示所有格式标记"><a href="#显示所有格式标记" class="headerlink" title="显示所有格式标记"></a>显示所有格式标记</h3><p>显示所有格式标记后，可以让编制者对文档格式的细节有较强的把握。要显示所有格式标记，在Word选单(左上角)中的Word选项（最下方）中的显示。标签中的始终在屏幕中显示这些格式标记中勾选显示所有格式标记即可。</p>
+<h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><p>在复制后注意选择复制选项可以减少格式修改的劳动量，如选择保留源格式，可以保持与源格式的字体、段落和样式。如选择匹配目标格式则会使用当前文档中的各种样式。其中优劣还需个人根据感受自行比较。</p>
+<h3 id="格式刷"><a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h3><p>要在目标内容中使用某参考内容格式，可以使用格式刷功能。</p>
+<p>要拷贝参考内容格式，首选选中参考内容，然后在开始栏目下的剪贴板菜单中选择格式刷，此时格式刷已经“蘸”上参考内容格式，鼠标成刷子状。接着用鼠标选中目标内容即可完全复制字体、字号、段落、样式等格式内容，刷完格式后，鼠标回复箭头形状。</p>
+<p>复刷格式，可以在选定参考内容后，双击格式刷锁定，此时可连续涂刷多个目标内容。按ESC或进行其他操作可退出锁定。</p>
+<h3 id="插入制表符调整文档位置"><a href="#插入制表符调整文档位置" class="headerlink" title="插入制表符调整文档位置"></a>插入制表符调整文档位置</h3><p>在标书编制中，经常会遇到文字需要间断情况，如页眉页脚，或者单位名称落款。</p>
+<p>除了使用空格来调节文档的位置外，制表符是精确调整文档位置的重要手段。</p>
+<p>要使用制表符，首先单击文档标尺左侧的的方框图案，此时方框中图案会变换。常用的分别为L型、倒立丁字型、左L型。分别指左对齐、中间对齐、右对齐。首先调整好对齐方式，然后选中要调整位置的文档所在行，如多行文档需调整可全部选中，接着在要对齐位置的标尺上单击。之后将光标放在文档需要间断的部分，按TAB键后，光标位置之后内容将按照左起第一个制表符格式对齐到制表符，再次按下，则会对应下一个制表符，以此类推。</p>
+<h3 id="插入框线"><a href="#插入框线" class="headerlink" title="插入框线"></a>插入框线</h3><p>在添加页眉页脚后，一般页眉会自动添加框线，但页脚不会。</p>
+<p>如要在页脚添加框线，可以选择第一行整行页脚后，在开始栏目下，段落栏目中选择框线，下拉菜单中添加相应框线（如上框线）。或在边框和底纹中调整。同样可以在页眉中，取消掉框线。</p>
+<blockquote>
+<p>注意，使用添加图形，直线也可以制作类似效果，但图形与文本结合不紧密，后期调整难度较大，且不利于变更，不推荐使用图形方法。</p>
+</blockquote>
+<h3 id="表格的调整"><a href="#表格的调整" class="headerlink" title="表格的调整"></a>表格的调整</h3><p>表格经常遇到的问题是，一、表格中字体不合适，位置不合理；二、表格太宽，超出页面范围，无法调整；三、表格太长换页后没有标题。</p>
+<p>表格布局在插入表格后，可在布局栏目下，对齐方式栏目中，选择文本在表格中的位置，及文档与单元格的边距。</p>
+<p>表格自动调整对于太宽的表格，可以采用选中表格后，在表格属性的列标签下，逐页调整列宽。另外，较快捷的办法是布局栏目下，单元格格式中，选择自动调整下拉菜单下的根据内容自动调整表格或者根据窗口自动调整表格。一般使用根据窗口自动调整后再进行手工调整。也可结合使用，具体使用可自行尝试。</p>
+<p>表格重复标题行和表格跨页断行要在跨页的表格中重复标题行，可以选择要重复的行后，在右键表格属性中的行标签中，勾选在隔页顶端以标题行形式重复，或者选中后直接选择布局栏目下的数据栏目中的重复标题行。</p>
+<p>要允许或禁止表格的跨页断行，选中整个或与操作的表格后，在在右键表格属性中的行标签中勾选或取消勾选允许表格跨页断行即可。</p>
+<p>表格的删除选中表格后使用BACKSPACE键可以删除整张表格。</p>
+<h3 id="查找功能的应用"><a href="#查找功能的应用" class="headerlink" title="查找功能的应用"></a>查找功能的应用</h3><p>基础查找及替换功能不再赘述，下面就一些应用经验进行分享。</p>
+<h3 id="查找特殊格式文档"><a href="#查找特殊格式文档" class="headerlink" title="查找特殊格式文档"></a>查找特殊格式文档</h3><p>在标书编制中难免有未能及时准备好的资料，此时可先插入红色字体（或其他不同于正文格式的）文档进行占位。在最后审查时，可在查找中，选择更多&gt;&gt;，在左下方的格式中选择字体，选择字体颜色为红色。之后点击查找即可找到之前插入的红色字体，其他格式亦然。</p>
+<h3 id="查找模糊词语"><a href="#查找模糊词语" class="headerlink" title="查找模糊词语"></a>查找模糊词语</h3><p>有时可能会需要查找形如“第N章”这样的内容，可在查找的更多选项中，选择“任意字符”来替换N，即可查找出相关内容。对于其他字符可自行尝试。浏览对象单击右侧滚动条下方的圆点符号，会弹出各图标，在其中选择相应内容后，点击圆圈上下的箭头符号即可按顺序浏览相关内容，适用于修改表格或图片等内容时的检查工作。</p>
+<h3 id="新建窗口"><a href="#新建窗口" class="headerlink" title="新建窗口"></a>新建窗口</h3><p>在标书制作过程中，经常有同一文档中上下文需比对的内容，此时如内容不多，可使用 Shift+F5键切换位置，对于内容较多时，可采用新建窗口方式。</p>
+<p>要新建窗口可选择视图栏目下的窗口栏目中的新建窗口选项。点击后会将源文档在Windows任务栏中拆为文档：1、文档：2两个。这两个文档内容相同，修改一个另一个也会变化，可以理解为就是在原文档中增加了一个观察的位置。点击窗口项目中的并排查看，可并排查看文档以便比对（不仅适用于新建窗口，也可将不同文档并排查看）。 要取消新建窗口，直接关闭其中一个窗口即可，此时不会提示保存等信息。</p>
+<blockquote>
+<p>注意：如提示需要保存，很可能你已经关闭了所有新建窗口，此时正在关闭源文档。</p>
+</blockquote>
+<h3 id="插入批注"><a href="#插入批注" class="headerlink" title="插入批注"></a>插入批注</h3><p>在多人协同作业时，批注可以有效提示其他同事注意要点。或者用于提示自己要添加的内容。</p>
+<p>要对制定内容添加批注，可选择审阅栏目下的批注栏目中的新建批注选项。提示，如文档中没有批注项，批注栏目中的其他选项不可选，可以利用此特点检查最终文档中是否残留批注项。</p>
+<p>添加批注后，一般会在文档右侧引出单独的批注项，如在其他位置出现，可选择旁边修订项目下的批注框下拉菜单，选择在批注框中显示修订（虽然对象为修订但同样适用与批注）。</p>
+<p>在批注栏目中选择上一条或下一条可按顺序浏览各条批注。选择删除按钮，可以删除当前选中批注，或者在删除的下拉菜单中删除所有批注。批注者的名称可在修订栏目下的修订下拉菜单中的更改用户名修改，批注中显示缩写。</p>
+<h3 id="文档中图片的提取"><a href="#文档中图片的提取" class="headerlink" title="文档中图片的提取"></a>文档中图片的提取</h3><p>有时可能会遇到需从文档中将图片提取为其他格式图片。使用复制到画图板中方式文件质量不高。</p>
+<p>可采用以下方法：</p>
+<p>新建一个Word文档，将需要提取的图片复制到新建文档中。在Word选单(左上角)中另存为选单中选择其他格式，在保存类型中选择网页（*.htm,*.html）。</p>
+<p>在网页生成的相关文件夹下可以找到原格式的图片</p>
+<h3 id="双面打印"><a href="#双面打印" class="headerlink" title="双面打印"></a>双面打印</h3><p>有些标书会要求双面打印，此时页面布局、页眉页脚等都会受到影响，要满足双面打印要求，需要如下操作支持。</p>
+<h3 id="双面打印页边距"><a href="#双面打印页边距" class="headerlink" title="双面打印页边距"></a>双面打印页边距</h3><p>在页面布局栏目下，页面设置栏目中的页边距下拉菜单中选择自定义边距，在页码范围，多页中选择对称页边距并应用于整篇。</p>
+<h3 id="双面打印页眉页脚"><a href="#双面打印页眉页脚" class="headerlink" title="双面打印页眉页脚"></a>双面打印页眉页脚</h3><p>双击页眉或页脚进入编辑模式，在设计栏目下，选项栏目中勾选奇偶页不同，此时需重新设置偶数页页眉页脚。注意：此奇偶页按Word统计页数而插入的页码；奇偶页不同不影响奇偶页页码的连续性。</p>
+<p>在双面打印时，应考虑页眉页脚中，文档的位置的对称性是否合理，页码位置是否合理。</p>
+<h3 id="打印机设置"><a href="#打印机设置" class="headerlink" title="打印机设置"></a>打印机设置</h3><p>不同打印机双面打印设置不同，请结合具体情况进行设置。</p>
+<h3 id="自动保存的设置"><a href="#自动保存的设置" class="headerlink" title="自动保存的设置"></a>自动保存的设置</h3><p>一般文件自动保存可以帮助我们避免损失，但如果文档过大，自动保存会拖慢系统速度甚至造成系统崩溃、死机。</p>
+<p>要调节自动保存设置，可在Word选单(左上角)中Word选项按钮（菜单最下方）中的保存标签中设置。</p>
+<h3 id="大写价格"><a href="#大写价格" class="headerlink" title="大写价格"></a>大写价格</h3><p>现在网络下载的最新输入法，均具有数字大写自动转换功能，为避免大写出错，请查询使用的输入法相关应用功能。</p>
+<h3 id="整体文档框架下，部分内容频繁替换的标书编写工作方法探讨"><a href="#整体文档框架下，部分内容频繁替换的标书编写工作方法探讨" class="headerlink" title="整体文档框架下，部分内容频繁替换的标书编写工作方法探讨"></a>整体文档框架下，部分内容频繁替换的标书编写工作方法探讨</h3><p>有时标书文件中，部分代理产品的品牌一时难以决定，此时标书随时可能面临修改。 如针对各品牌单独制作标书文件，在其他商务文件框架修改及优化时，会造成工作量成倍增加，且难以同步各版修改情况。</p>
+<p>因此，建议在遇到类似情况是，标注好已完成版本中所有可能要替换的部分，然后再针对各部分单独制作小段不同品牌文档。在最终品牌确定后，再进行替换工作，如此可减少因修改带来的不便，也可以将不同文档部件分给不同人员制作，合理利用人力。</p>
+<h3 id="文件的及时备份"><a href="#文件的及时备份" class="headerlink" title="文件的及时备份"></a>文件的及时备份</h3><p>对于重要文件，为防止Word系统出错等造成文档损坏，需及时备份文件，备份文件时一定要注意版本区分，慎用最终版字样，建立更新日志。</p>
+<h3 id="单独文档的准确性"><a href="#单独文档的准确性" class="headerlink" title="单独文档的准确性"></a>单独文档的准确性</h3><p>在编写标书文件时，经常会遇到从其他单独内容的文档中复制的情况，因此对单独文档的准确性和一致性一定要特别注意。尤其其中针对项目替换的字眼，需要在单独文档中给予标注。可使用如本项目等通用字眼，提高文档的可用性。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="img/fluid.png"></a><div class="post-copyright__author_name">惟灿 Can1425</div><div class="post-copyright__author_desc">四野星辰，春芒复生</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是转载或翻译文章，版权归原作者所有。转载本文请联系原作者。</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tags-punctuation"></span>软件<span class="tagsPageCount">4</span></a><a class="post-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tags-punctuation"></span>技巧<span class="tagsPageCount">2</span></a><a class="post-meta__tags" href="/tags/Word/"><span class="tags-punctuation"></span>Word<span class="tagsPageCount">1</span></a><a class="post-meta__tags" href="/tags/%E5%8A%9E%E5%85%AC/"><span class="tags-punctuation"></span>办公<span class="tagsPageCount">1</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/ledongmpy/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">乐动传感器的学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/qinglian/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">清廉家风的故事 - 鲁迅，钱基博，梁启超，胡适</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="scoicon sco-star-smile-fill"></i><span>喜欢这篇的人也看了</span><div class="relatedPosts-link"><a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a></div></div><div class="relatedPosts-list"><div><a href="/2024030302/" title="记一次剪映草稿版本降级"><img class="cover" src="/img/24_3_5bb4554cb8d210868939903301a837cc.jpg" alt="cover"><div class="content is-center"><div class="title">记一次剪映草稿版本降级</div></div></a></div><div><a href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img class="cover" src="/img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg" alt="cover"><div class="content is-center"><div class="title">记一次 Python 转义字符所引起的问题及关于其的学习笔记</div></div></a></div></div></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="scoicon sco-chat-fill"></i><span> 评论</span><span></span></div><div class="comment-randomInfo"><a onclick="sco.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div id="comment"></div><script>async function initComment() {
+    Waline.init(Object.assign({
+        el: '#comment',
+        serverURL: 'https://waline-1-a6137923.deta.app',
+        pageview: true,
+        dark: 'html[data-theme="dark"]',
+        path: window.location.pathname,
+        search: false,
+        comment: true,
+    }, null))
+}</script></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="img/fluid.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">惟灿 Can1425</div><div class="author-info__desc">四野星辰，春芒复生</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/Can1425" title="Github"><i class="scoicon scoicon sco-github-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="scoicon sco-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E4%B9%A6%E7%BC%96%E5%86%99%E4%B8%AD%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">标书编写中会用到的功能分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E6%95%B4%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80"><span class="toc-text">调整页面布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E6%95%B4%E9%A1%B5%E8%BE%B9%E8%B7%9D"><span class="toc-text">调整页边距</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B8%E5%BC%A0%E6%96%B9%E5%90%91%E4%B8%8E%E6%8F%92%E5%85%A5%E5%88%86%E8%8A%82%E7%AC%A6"><span class="toc-text">纸张方向与插入分节符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%88%86%E9%A1%B5%E7%AC%A6"><span class="toc-text">插入分页符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E7%9A%84%E6%B7%BB%E5%8A%A0"><span class="toc-text">页眉页脚的添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E9%A1%B5%E7%A0%81"><span class="toc-text">插入页码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%92%8C%E6%AE%B5%E8%90%BD"><span class="toc-text">字体和段落</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-text">段落</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%A0%87%E9%A2%98%E9%9A%94%E9%A1%B5"><span class="toc-text">样式和标题隔页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="toc-text">样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E9%9A%94%E9%A1%B5"><span class="toc-text">标题隔页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E7%9B%AE%E5%BD%95"><span class="toc-text">插入目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">插入图片注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E8%A1%A8%E6%A0%BC%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">插入表格注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E9%9D%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">封面注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">其他注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="toc-text">文件的大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8"><span class="toc-text">标点符号的正确使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E4%B9%A6%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1"><span class="toc-text">标书格式的总体设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9%E6%96%87%E6%A1%A3%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">兼容文档的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%E7%9A%84%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD"><span class="toc-text">提高效率的进阶功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%89%80%E6%9C%89%E6%A0%BC%E5%BC%8F%E6%A0%87%E8%AE%B0"><span class="toc-text">显示所有格式标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4"><span class="toc-text">复制粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%88%B7"><span class="toc-text">格式刷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%88%B6%E8%A1%A8%E7%AC%A6%E8%B0%83%E6%95%B4%E6%96%87%E6%A1%A3%E4%BD%8D%E7%BD%AE"><span class="toc-text">插入制表符调整文档位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%A1%86%E7%BA%BF"><span class="toc-text">插入框线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-text">表格的调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%8A%9F%E8%83%BD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">查找功能的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%89%B9%E6%AE%8A%E6%A0%BC%E5%BC%8F%E6%96%87%E6%A1%A3"><span class="toc-text">查找特殊格式文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E6%A8%A1%E7%B3%8A%E8%AF%8D%E8%AF%AD"><span class="toc-text">查找模糊词语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E7%AA%97%E5%8F%A3"><span class="toc-text">新建窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%89%B9%E6%B3%A8"><span class="toc-text">插入批注</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E4%B8%AD%E5%9B%BE%E7%89%87%E7%9A%84%E6%8F%90%E5%8F%96"><span class="toc-text">文档中图片的提取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E9%9D%A2%E6%89%93%E5%8D%B0"><span class="toc-text">双面打印</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E9%9D%A2%E6%89%93%E5%8D%B0%E9%A1%B5%E8%BE%B9%E8%B7%9D"><span class="toc-text">双面打印页边距</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E9%9D%A2%E6%89%93%E5%8D%B0%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A"><span class="toc-text">双面打印页眉页脚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8D%B0%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-text">打印机设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-text">自动保存的设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%86%99%E4%BB%B7%E6%A0%BC"><span class="toc-text">大写价格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E6%96%87%E6%A1%A3%E6%A1%86%E6%9E%B6%E4%B8%8B%EF%BC%8C%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E9%A2%91%E7%B9%81%E6%9B%BF%E6%8D%A2%E7%9A%84%E6%A0%87%E4%B9%A6%E7%BC%96%E5%86%99%E5%B7%A5%E4%BD%9C%E6%96%B9%E6%B3%95%E6%8E%A2%E8%AE%A8"><span class="toc-text">整体文档框架下，部分内容频繁替换的标书编写工作方法探讨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%8A%E6%97%B6%E5%A4%87%E4%BB%BD"><span class="toc-text">文件的及时备份</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%8B%AC%E6%96%87%E6%A1%A3%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7"><span class="toc-text">单独文档的准确性</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024030302/" title="记一次剪映草稿版本降级"><img alt="记一次剪映草稿版本降级" src="img/24_3_5bb4554cb8d210868939903301a837cc.jpg"></a><div class="content"><a class="title" href="/2024030302/" title="记一次剪映草稿版本降级">记一次剪映草稿版本降级</a><a class="article-recent_post_categories" href="/2024030302/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记"><img alt="记一次 Python 转义字符所引起的问题及关于其的学习笔记" src="img/24_3_38e78c865a12bc26665f21fb527deb9e.jpg"></a><div class="content"><a class="title" href="/2024030301/" title="记一次 Python 转义字符所引起的问题及关于其的学习笔记">记一次 Python 转义字符所引起的问题及关于其的学习笔记</a><a class="article-recent_post_categories" href="/2024030301/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）"><img alt="Flag OS 介绍（搬运自项目开源仓库）" src="/img/flagos_logo.jpg"></a><div class="content"><a class="title" href="/flagos-Introduction/" title="Flag OS 介绍（搬运自项目开源仓库）">Flag OS 介绍（搬运自项目开源仓库）</a><a class="article-recent_post_categories" href="/flagos-Introduction/">我的项目</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/ledongmpy/" title="乐动传感器的学习笔记"><img alt="乐动传感器的学习笔记" src="/img/ledongmpy.jpg"></a><div class="content"><a class="title" href="/ledongmpy/" title="乐动传感器的学习笔记">乐动传感器的学习笔记</a><a class="article-recent_post_categories" href="/ledongmpy/">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/word/" title="Word 文档编辑技巧"><img alt="Word 文档编辑技巧" src="/img/word.jpg"></a><div class="content"><a class="title" href="/word/" title="Word 文档编辑技巧">Word 文档编辑技巧</a><a class="article-recent_post_categories" href="/word/">经验分享</a></div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">惟灿 Can1425</span></div><div class="footer-bar-description">来自惟灿 Can1425 - 四野星辰，春芒复生的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="img/fluid.png" alt="返回顶部"></div></div><div id="sco-footer"><div class="footer-group"><div class="footer-title-group"><h3 class="footer-title">友链</h3><a class="random-friends-btn" href="javascript:randomLinksList();"><i class="scoicon sco-refresh-line"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2024 By&nbsp;<a class="footer-bar-link" href="/">惟灿 Can1425</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="scoicon sco-chat-new-fill"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://music.163.com/#/playlist?id=8407304077', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-commentBarrage"><i class="scoicon sco-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/Swiper/11.0.5/swiper-bundle.min.js"></script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/waterfall.min.js"></script><script src="https://cdn.staticfile.org/waline/2.15.8/waline.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.8/waline.min.css"><script src="/js/comment/waline_commentBarrage.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script></div><div id="js-pjax"><script async src="https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.min.js"></script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: 'post',
+    toc: true,
+    comment: true,
+}
+</script></div><script>const links = [{"name":"张洪Heo","link":"https://blog.zhheo.com/"}]
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    utils.snackbarShow('您即将前往 ⌈ ' + link.name + ' ⌋ , 安全性未知', false, 3000);
+    setTimeout(() => {
+        window.open(link.link, "_blank")
+    }, 3000)
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
+
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
+}</script><!-- newest comment--><script>window.addEventListener('load', () => {
+    const changeContent = (content) => {
+        if (content === '') return content;
+
+        const replacements = [
+            {regex: /<img.*?src="(.*?)"?[^\>]+>/ig, replacement: '[图片]'},
+            {regex: /<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, replacement: '[链接]'},
+            {regex: /<pre><code>.*?<\/pre>/gi, replacement: '[代码]'},
+            {regex: /<[^>]+>/g, replacement: ""}
+        ];
+
+        content = replacements.reduce((str, {regex, replacement}) => str.replace(regex, replacement), content);
+
+        return content.length > 150 ? content.substring(0, 150) + '...' : content;
+    }
+
+    const $asideList = document.querySelector('#card-newest-comments .aside-list')
+    const newestCommentInit = () => {
+        if ($asideList) {
+            getComment()
+        }
+    }
+    const getComment = () => {
+        Waline.RecentComments(
+            options = {
+                serverURL: GLOBAL_CONFIG.comment.waline.url,
+                count: 6,
+            }
+        ).then(function (res) {
+            const walineArray = res.comments.map(item => ({
+                'content': changeContent(item.comment),
+                'avatar': item.avatar,
+                'nick': item.nick,
+                'url': `${item.url}#${item.objectId}`,
+                'date': new Date(item.insertedAt).toISOString()
+            }))
+            generateHtml(walineArray)
+        }).catch(
+            $asideList.innerHTML = "无法获取评论，请确认相关配置是否正确"
+        )
+    }
+
+    const generateHtml = array => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML = array.length ? array.map(item => `
+            <div class='aside-list-item'>
+              <a href='${item.url}' class='thumbnail'>
+                <img src='${item.avatar}' alt='${item.nick}'>
+                <div class='name'><span>${item.nick}</span></div>
+              </a>
+              <div class='content'>
+                <a class='comment' href='${item.url}'>${item.content}</a>
+                <time class="datetime" datetime="${item.date}"></time>
+              </div>
+            </div>
+          `).join('') : '没有评论'
+        window.lazyLoadInstance && window.lazyLoadInstance.update()
+        window.pjax && window.pjax.refresh($dom)
+        changeTimeFormat()
+    }
+
+    newestCommentInit()
+})</script><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><!-- music--></body></html><script>const posts=["2024030302/","2024030301/","flagos-Introduction/","ledongmpy/","word/","qinglian/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
